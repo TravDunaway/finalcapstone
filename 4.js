@@ -1,6 +1,7 @@
 
 const baseURL = 'http://localhost:4000'
-
+let playersPart = window.location.search
+console.log(playersPart)
 
 const a1 = document.getElementById('a')
 const b1 = document.getElementById('b')

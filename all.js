@@ -1,2 +1,0 @@
-let playerOneName = ""
-let playerTwoName = ""

@@ -7,7 +7,7 @@
             padding-top: 15px;
             padding-bottom: 15px;
             position: static;
-            
+           
           
         }
         .row-1 {
@@ -734,7 +734,8 @@ cursor: pointer;
     margin-right: auto;
     border-width: thin medium thick;
     height: 0px;
-    font-weight:800
+    font-weight:800;
+    white-space: nowrap;
   }
  
   * {background-color: #C2BFAD}

@@ -1,3 +1,7 @@
+
+const baseURL = 'http://localhost:4000'
+
+
 const a1 = document.getElementById('a')
 const b1 = document.getElementById('b')
 const c1 = document.getElementById('c')
@@ -38,8 +42,22 @@ for (let i = 0; i < allTiles.length; i++) {
     allTiles[i].addEventListener('click', addingToCounterFunction)
 }
 // console.log(`${counter} before addingtoCounterFunction`)
+
+
+
+
+
 function addingToCounterFunction(event){
-   document.counter++
+    document.counter++
+    
+    
+
+
+
+
+
+
+
     if (document.counter % 2 === 0){
         event.target.style.backgroundColor ='#706526'
         document.getElementById("firstName").innerHTML = "KATE"
@@ -295,3 +313,4 @@ function addingToCounterFunction(event){
     } 
    
 }
+

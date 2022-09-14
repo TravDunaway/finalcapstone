@@ -1,0 +1,39 @@
+*{background-color: #C2BFAD}
+.parent2html{
+    white-space: nowrap;
+    text-align: center;
+}
+
+#playeronetext{
+    font-size: 240px;
+    margin-top: 300px;
+    color: rgb(112, 101, 38);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500
+}
+
+#inputname{
+    color: rgba(234, 220, 140, 1);
+    background-color: rgba(112, 101, 38);
+    border: 0px;
+    font-size: 60px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+#submitbtn{
+    color: rgba(234, 220, 140, 1);
+    background-color: #66645B;
+    font-size: 60px;
+    border: 0px;
+    padding: 10px 330px;
+    
+    
+    /* margin-left: -15px; */
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+}

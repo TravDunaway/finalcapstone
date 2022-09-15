@@ -1,7 +1,8 @@
+// const { response } = require("express")
 
 const baseURL = 'http://localhost:4000'
 let playersPart = window.location.search
-console.log(playersPart)
+// console.log(playersPart)
 let playersParttwo = playersPart
 
 let players = playersParttwo.split("")
@@ -14,12 +15,14 @@ for (let i = 0; i < playerone.length; i++){
     playername.push(playerone[i])
 } 
 let d = playername.join('')
-console.log(d)
-
+console.log(`${d} is d`)
+let e = d.toUpperCase()
+console.log(e)
 let b = playersParttwo.replace('?playerone=', '')
 let c = b.replace(`${d}&secondPlayer=`, '')
-console.log(c)
-
+console.log(`${c} this is c`)
+let f = c.toUpperCase()
+console.log(f)
 
 
 const a1 = document.getElementById('a')
@@ -80,7 +83,7 @@ function addingToCounterFunction(event){
 
     if (document.counter % 2 === 0){
         event.target.style.backgroundColor ='#706526'
-        document.getElementById("firstName").innerHTML = c
+        document.getElementById("firstName").innerHTML = f
         
         console.log(document.counter)
         console.log(a1.style.backgroundColor)
@@ -88,7 +91,7 @@ function addingToCounterFunction(event){
 
     }  else {
         event.target.style.backgroundColor ='#66645B'
-        document.getElementById("firstName").innerHTML = d
+        document.getElementById("firstName").innerHTML = e
         console.log(document.counter)
         console.log(a1.style.backgroundColor)
         
@@ -100,7 +103,8 @@ function addingToCounterFunction(event){
         && c1.style.backgroundColor === d1.style.backgroundColor
         && d1.style.backgroundColor === e1.style.backgroundColor) 
     {
-        console.log("you won a-e-green")  
+        console.log("you won a-e-green")
+        return getCompliment() 
     }
     if ( document.counter > 3 
         && a1.style.backgroundColor === ('rgb(102, 100, 91)')
@@ -110,6 +114,7 @@ function addingToCounterFunction(event){
         && d1.style.backgroundColor === e1.style.backgroundColor) 
     {
         console.log("you won a-e-grey")  
+        // return postWinner()
     }
     if ( document.counter > 3 
         && f1.style.backgroundColor === ('rgb(112, 101, 38)')
@@ -334,3 +339,27 @@ function addingToCounterFunction(event){
    
 }
 
+const getCompliment = () => {
+    axios.get("http://localhost:4000/api/compliment/")
+        .then(res => {
+            const data = res.data;
+            alert(data);
+    });
+};
+
+
+// const postWinner = () => {
+//     const winners = {
+//         nameofwinner: f,
+//     }
+
+//     axios.post("http://localhost:4000/api/winnersnames/", winners)
+//         .then((response) => {
+//             const data = res.data
+//             console.log(data)
+
+//         })
+
+
+
+// }

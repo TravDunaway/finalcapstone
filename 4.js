@@ -2,6 +2,25 @@
 const baseURL = 'http://localhost:4000'
 let playersPart = window.location.search
 console.log(playersPart)
+let playersParttwo = playersPart
+
+let players = playersParttwo.split("")
+// console.log(players)
+let playerone = players.slice(11, )
+let playername = []
+// console.log(playerone)
+for (let i = 0; i < playerone.length; i++){
+    if (playerone[i] === "&") {break}
+    playername.push(playerone[i])
+} 
+let d = playername.join('')
+console.log(d)
+
+let b = playersParttwo.replace('?playerone=', '')
+let c = b.replace(`${d}&secondPlayer=`, '')
+console.log(c)
+
+
 
 const a1 = document.getElementById('a')
 const b1 = document.getElementById('b')
@@ -61,7 +80,7 @@ function addingToCounterFunction(event){
 
     if (document.counter % 2 === 0){
         event.target.style.backgroundColor ='#706526'
-        document.getElementById("firstName").innerHTML = "KATE"
+        document.getElementById("firstName").innerHTML = c
         
         console.log(document.counter)
         console.log(a1.style.backgroundColor)
@@ -69,7 +88,7 @@ function addingToCounterFunction(event){
 
     }  else {
         event.target.style.backgroundColor ='#66645B'
-        document.getElementById("firstName").innerHTML = "TRAVIS"
+        document.getElementById("firstName").innerHTML = d
         console.log(document.counter)
         console.log(a1.style.backgroundColor)
         
